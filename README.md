@@ -1,8 +1,8 @@
-# React PDF Starter Toolkit in React.js, JavaScript and Webpack
+# React PDF Kit Starter Toolkit in React.js, JavaScript and Webpack
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github.com/react-pdf-dev/starter-rp-react-js-webpack)
 
-Welcome to the React PDF Starter Toolkit! This repository provides a comprehensive guide on integrating React PDF with React, JavaScript and Webpack. It showcases how React PDF can be integrated and rendered as part of a React.js project.
+Welcome to the React PDF Kit Starter Toolkit! This repository provides a comprehensive guide on integrating React PDF with React, JavaScript and Webpack. It showcases how React PDF can be integrated and rendered as part of a React.js project.
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ Welcome to the React PDF Starter Toolkit! This repository provides a comprehensi
 1. **Clone the Repository**: If you haven't already, clone the repository and navigate into the project directory.
 
    ```bash
-   git clone https://github.com/react-pdf-dev/starter-rp-react-js-webpack.git
+   git clone https://github.com/react-pdf-kit/starter-rp-react-js-webpack.git
    cd starter-rp-react-js-webpack
    ```
 
@@ -36,7 +36,7 @@ Welcome to the React PDF Starter Toolkit! This repository provides a comprehensi
 
 ### Running the Example Project
 
-This repository includes an example project to demonstrate React PDF in action.
+This repository includes an example project to demonstrate React PDF Kit in action.
 
 1. **Start the Development Server**: Use the following command to start the development server
 
@@ -61,9 +61,9 @@ Once the example project is running, you can explore the source code to see how 
 ```jsx
 import {
   RPProvider,
-  RPDefaultLayout,
+  RPLayout,
   RPPages,
-} from "@pdf-viewer/react";
+} from "@react-pdf-kit/viewer";
 
 export const AppPDFViewer = (props) => {
   const { showToolbar = true, providerProps, defaultLayoutProps } = props;
@@ -74,9 +74,9 @@ export const AppPDFViewer = (props) => {
       {...providerProps}
     >
       {showToolbar ? (
-        <RPDefaultLayout {...defaultLayoutProps}>
+        <RPLayout toolbar {...defaultLayoutProps}>
           <RPPages />
-        </RPDefaultLayout>
+        </RPLayout>
       ) : (
         <div style={{ width: "100%", height: "550px" }}>
           <RPPages/>
@@ -91,7 +91,7 @@ export const AppPDFViewer = (props) => {
 
 ```jsx
 import "./App.css";
-import { RPConfig } from "@pdf-viewer/react";
+import { RPConfig } from "@react-pdf-kit/viewer";
 import { AppPDFViewer } from "./components/AppPDFViewer";
 
 function App() {
@@ -141,4 +141,4 @@ For more configurations, please check the [documentation](https://docs.react-pdf
 
 ---
 
-Thank you for using React PDF! We hope this toolkit helps you build amazing React.js applications. If you have any questions or need further assistance on this example, please feel free to open an issue. Happy coding!
+Thank you for using React PDF Kit! We hope this toolkit helps you build amazing React.js applications. If you have any questions or need further assistance on this example, please feel free to open an issue. Happy coding!

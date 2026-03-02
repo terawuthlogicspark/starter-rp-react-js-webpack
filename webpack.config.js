@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const CopyPlugin = require('copy-webpack-plugin')
 const package = require("./package.json");
 const commonPaths = require("./utils/config/commonPaths");
 
@@ -26,6 +26,14 @@ module.exports = {
       template: "public/index.html",
       filename: "index.html",
     }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'node_modules/pdfjs-dist/legacy/build/pdf.worker.min.mjs',
+          to: 'pdf.worker.min.mjs'
+        }
+      ]
+    })
   ],
   devServer: {
     port: port,

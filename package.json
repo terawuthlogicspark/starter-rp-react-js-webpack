@@ -1,7 +1,7 @@
 {
   "name": "starter-rp-react-js-webpack",
   "version": "1.0.0",
-  "description": "Welcome to the React PDF Starter Toolkit! This repository provides a comprehensive guide on integrating React PDF with React, JavaScript and Webpack. It showcases how React PDF can be integrated and rendered as part of a React.js project.",
+  "description": "Welcome to the React PDF Kit Starter Toolkit! This repository provides a comprehensive guide on integrating React PDF with React, JavaScript and Webpack. It showcases how React PDF can be integrated and rendered as part of a React.js project.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,17 +15,30 @@
     "@babel/core": "^7.26.9",
     "@babel/preset-env": "^7.26.9",
     "@babel/preset-react": "^7.26.3",
-    "babel-loader": "^9.2.1",
-    "css-loader": "^7.1.2",
-    "html-webpack-plugin": "^5.6.3",
-    "style-loader": "^4.0.0",
-    "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.0"
+    "babel-loader": "^8.4.1",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.4",
+    "html-webpack-plugin": "^4.5.2",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.105.3",
+    "webpack-cli": "6.0.1",
+    "webpack-dev-server": "5.2.0"
   },
   "dependencies": {
-    "@pdf-viewer/react": "latest",
+    "@react-pdf-kit/viewer": "^2.0.0",
+    "pdfjs-dist": "5.4.624",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "overrides": {
+    "pdfjs-dist": "5.4.624"
+  },
+  "pnpm": {
+    "overrides": {
+      "pdfjs-dist": "5.4.624"
+    }
+  },
+  "resolutions": {
+    "pdfjs-dist": "5.4.624"
   }
 }
